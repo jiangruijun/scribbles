@@ -1,0 +1,10 @@
+1, 
+erase startup-config
+
+2, 
+dir flash:
+del vlan.dat
+
+3, 
+reload
+n
