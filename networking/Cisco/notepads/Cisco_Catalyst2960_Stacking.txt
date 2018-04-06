@@ -1,0 +1,37 @@
+/*
+                    _
+                   | |
+Sw1          1     2 |
+               \     |
+                \    |
+                 \   |
+Sw2          1     2 |
+               \     |
+                \    |
+                 \   |
+Sw3          1     2 |
+             |_______|
+
+*/
+
+//Prerequisites: All switches in a stack should be running the same Cisco IOS version. 
+
+1, 
+do show ver
+do show sw
+switch 8 renumber 1
+do reload slot 8
+y
+
+2, 
+en
+show sw
+conf t
+sw 1 pri 15
+do show sw
+
+3, 
+do show run | sec provision
+no switch 8 provision ws-c2960x-48fpd-l
+do show ip inter b
+do wr
