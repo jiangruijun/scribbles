@@ -7,12 +7,12 @@ public class SelectionSort{
 		int len=100000;
 		int a[]=new int[len];
 		for(int i=0;i<len;i++){
-			int seq=(int)(Math.random()*100000);
-			a[i]=seq;
+			int mr=(int)(Math.random()*100000);
+			a[i]=mr;
 		}
 		
 		/*
-		System.out.println("A New Sequence: ");
+		System.out.println("A New List: ");
 		for(int i=0;i<a.length;i++){
 			if((i+1)%10==0){
 				System.out.println(a[i]+" ");
@@ -31,7 +31,7 @@ public class SelectionSort{
 		System.out.println("Finish Sorting Time: \n"+finish.getTime());
 		
 		/*
-		System.out.println("The Sorted Sequence: ");
+		System.out.println("The Sorted List: ");
 		for(int i=0;i<a.length;i++){
 			if((i+1)%10==0){
 				System.out.println(a[i]+" ");
